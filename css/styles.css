@@ -217,6 +217,21 @@ img {
   fill: currentColor;
   margin-right: 10px;
 }
+.active-text-color {
+  position: relative;
+}
+
+.active-text-color::after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -1px;
+  
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 
 /*#endregion*/
 /*#region section hero */
