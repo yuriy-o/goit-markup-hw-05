@@ -369,7 +369,7 @@ img {
   width: 30px;
   height: 30px;
   padding: 0;
-  border-color: var(--modal-button-border-close);
+  border: var(--modal-button-border-close);
   border-radius: 50%;
   color: var(--logo-black-color);
   background-color: var(--main-background-color);
