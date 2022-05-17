@@ -325,25 +325,36 @@ img {
   height: 100%;
   background-color: var(--backdrop-background-color);
   z-index: 100;
+
+  opacity: 1;
+
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal-wrapper {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0;
+}
 
 .modal-wrapper {
-  position: relative;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 
   width: 528px;
   height: 581px;
 
   background-color: var(--main-background-color);
+
+  transition: transform var(--transition-duration) var(--transition-timing-function),
+  opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .modal-button-close {
@@ -365,17 +376,16 @@ img {
   cursor: pointer;
 }
 
-.modal-close {
-  fill: currentColor;
-}
+.modal-button-close:hover,
+.modal-button-close:focus {
+  color: var(--accent-color);
 
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--accent-color);
-
-  transition: fill;
+  transition: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+}
+.modal-close {
+  fill: currentColor;
 }
 
 /* #endregion */
