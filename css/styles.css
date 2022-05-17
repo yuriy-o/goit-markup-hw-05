@@ -123,9 +123,10 @@ img {
   align-items: center;
 }
 
+/* для ховера краще width: 100vw; ніж width: 100%; */
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 999;
@@ -235,6 +236,7 @@ img {
   fill: currentColor;
   margin-right: 10px;
 }
+/* або на navigation-link */
 .active-text-color {
   position: relative;
 }
