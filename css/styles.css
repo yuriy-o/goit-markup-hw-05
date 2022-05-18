@@ -354,7 +354,7 @@ img {
   background-color: var(--main-background-color);
 
   transition: transform var(--transition-duration) var(--transition-timing-function),
-  opacity var(--transition-duration) var(--transition-timing-function);
+    opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .modal-button-close {
@@ -785,6 +785,62 @@ img {
 }
 
 /* #endregion */
+/*№region Portfolio CodePen Home Card slide flip */
+
+.scene {
+  width: 370px;
+  height: 294px;
+
+  perspective: 600px;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-item:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  color: white;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-face-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  color: var(--secondary-text-color);
+  background-color: var(--background-color-overlay);
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  transform: rotateY(180deg);
+}
+
+/* #endregion */
+
 /*#region Footer */
 
 .footer {
