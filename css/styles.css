@@ -760,8 +760,9 @@ img {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.portfolio-item:hover .card-thumb-overlay {
-  transform: translateY(0);
+.portfolio-link:hover .card-thumb-overlay,
+.portfolio-link:focus .card-thumb-overlay {
+transform: translateY(0);
 }
 
 .portfolio-second-title {
@@ -808,7 +809,8 @@ img {
   position: relative;
 }
 
-.portfolio-item:hover .card {
+.portfolio-link:hover .card,
+.portfolio-link:focus .card {
   transform: rotateY(180deg);
 }
 
