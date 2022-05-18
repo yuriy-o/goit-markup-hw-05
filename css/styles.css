@@ -554,7 +554,7 @@ img {
 }
 
 /* #endregion */
-/*#region Social Icons */
+/*#region ++ Social Icons */
 
 .social-items {
   display: flex;
@@ -573,7 +573,10 @@ img {
 
   color: var(--icon-color);
   background-color: var(--main-background-color);
-}
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+      background-color var(--transition-duration) var(--transition-timing-function);
+  }
 
 .social-icon {
   fill: currentColor;
@@ -702,6 +705,9 @@ img {
   display: block;
 
   text-decoration: none;
+
+  transition: background var(--transition-duration) var(--transition-timing-function),
+      box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-link:hover,
@@ -785,7 +791,7 @@ img {
 }
 
 /* #endregion */
-/*№region Portfolio CodePen Home Card slide flip */
+/*#region ++ Portfolio CodePen Home Card slide flip */
 
 .scene {
   width: 370px;
@@ -796,7 +802,7 @@ img {
 .card {
   width: 100%;
   height: 100%;
-  transition: transform 1s;
+  transition: transform 1000ms;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
@@ -838,9 +844,7 @@ img {
 
   transform: rotateY(180deg);
 }
-
 /* #endregion */
-
 /*#region Footer */
 
 .footer {
@@ -917,6 +921,10 @@ img {
 
   color: var(--secondary-text-color);
   background-color: var(--footer-background-icon-color);
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+      background-color var(--transition-duration) var(--transition-timing-function);
+  }
 }
 
 .footer-social-icon {
