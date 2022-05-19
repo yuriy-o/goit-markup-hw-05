@@ -35,7 +35,7 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
   /* animation */
-  --transition-duration: 250ms;
+  --transition-duration: 2500ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --modal-button-border-close: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -185,6 +185,10 @@ img {
   text-decoration: none;
 
   color: var(--title-color);
+
+  transition: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .active-text-color,
@@ -195,13 +199,8 @@ img {
 .footer-address:hover,
 .footer-address:focus,
 .footer-link:hover,
-.footer-link:focus,
-.header-items > .icon:hover {
+.footer-link:focus {
   color: var(--accent-color);
-
-  transition: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
 }
 
 .header-list {
@@ -227,6 +226,10 @@ img {
   text-decoration: none;
 
   color: var(--main-text-color);
+
+  transition: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .header-items {
@@ -306,15 +309,15 @@ img {
   border-radius: 4px;
 
   cursor: pointer;
+
+  transition: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--button-hover-color);
-
-  transition: background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
 }
 
 .backdrop {
@@ -445,14 +448,14 @@ img {
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.features-item-icon:hover {
-  background-color: var(--accent-color);
 
   transition: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+}
+
+.features-item-icon:hover {
+  background-color: var(--accent-color);
 }
 
 .features-item-icon:hover .features-icon {
@@ -575,8 +578,8 @@ img {
   background-color: var(--main-background-color);
 
   transition: color var(--transition-duration) var(--transition-timing-function),
-      background-color var(--transition-duration) var(--transition-timing-function);
-  }
+    background-color var(--transition-duration) var(--transition-timing-function);
+}
 
 .social-icon {
   fill: currentColor;
@@ -586,9 +589,6 @@ img {
 .social-link:focus {
   color: var(--icon-color-hover);
   background-color: var(--button-hover-color);
-
-  transition: color var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .social-item:not(:last-child) {
@@ -610,15 +610,15 @@ img {
   border-radius: 4px;
 
   color: var(--icon-color);
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .clients-link:focus,
 .clients-link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
-
-  transition: color var(--transition-duration) var(--transition-timing-function),
-    border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .clients-icon {
@@ -674,6 +674,10 @@ img {
   padding: 6px 22px;
 
   color: var(--title-color);
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio .items {
@@ -690,10 +694,6 @@ img {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
   box-shadow: var(--button-shadow);
-
-  transition: background-color var(--transition-duration) var(--transition-timing-function),
-    color var(--transition-duration) var(--transition-timing-function),
-    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-list {
@@ -706,17 +706,13 @@ img {
 
   text-decoration: none;
 
-  transition: background var(--transition-duration) var(--transition-timing-function),
-      box-shadow var(--transition-duration) var(--transition-timing-function);
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
   background: var(--main-background-color);
   box-shadow: var(--portfolio-shadow);
-
-  transition: background var(--transition-duration) var(--transition-timing-function),
-    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-item {
@@ -754,7 +750,7 @@ img {
   line-height: 1.56;
   letter-spacing: 0.03em;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -762,7 +758,7 @@ img {
 
 .portfolio-link:hover .card-thumb-overlay,
 .portfolio-link:focus .card-thumb-overlay {
-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .portfolio-second-title {
@@ -875,6 +871,10 @@ transform: translateY(0);
 
   text-decoration: none;
   font-style: normal;
+
+  transition: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .footer-link {
@@ -884,6 +884,10 @@ transform: translateY(0);
 
   text-decoration: none;
   font-style: normal;
+
+  transition: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .footer-social-caption {
@@ -924,9 +928,7 @@ transform: translateY(0);
   color: var(--secondary-text-color);
   background-color: var(--footer-background-icon-color);
 
-  transition: color var(--transition-duration) var(--transition-timing-function),
-      background-color var(--transition-duration) var(--transition-timing-function);
-  }
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-social-icon {
@@ -935,11 +937,7 @@ transform: translateY(0);
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  color: var(--icon-color-hover);
   background-color: var(--button-hover-color);
-
-  transition: color var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-social-item:not(:last-child) {
